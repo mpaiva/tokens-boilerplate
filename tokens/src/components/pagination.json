@@ -1,0 +1,22 @@
+{
+  "component": {
+    "pagination": {
+      "item": {
+        "size": { "value": "{size.spacing.10}" },
+        "borderRadius": { "value": "{size.borderRadius.md}" },
+        "fontSize": { "value": "{typography.fontSize.sm}" },
+        "background": {
+          "default": { "value": "transparent" },
+          "hover": { "value": "{color.core.neutral.50}" },
+          "active": { "value": "{color.core.brand.primary.50}" }
+        },
+        "text": {
+          "default": { "value": "{color.core.neutral.600}" },
+          "hover": { "value": "{color.core.neutral.900}" },
+          "active": { "value": "{color.core.brand.primary.600}" },
+          "disabled": { "value": "{color.core.neutral.300}" }
+        }
+      }
+    }
+  }
+}

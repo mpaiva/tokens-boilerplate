@@ -1,0 +1,26 @@
+{
+  "component": {
+    "list": {
+      "item": {
+        "padding": {
+          "x": { "value": "{size.spacing.4}" },
+          "y": { "value": "{size.spacing.2}" }
+        },
+        "background": {
+          "default": { "value": "transparent" },
+          "hover": { "value": "{color.core.neutral.50}" },
+          "selected": { "value": "{color.core.brand.primary.50}" }
+        },
+        "text": {
+          "primary": { "value": "{color.core.neutral.900}" },
+          "secondary": { "value": "{color.core.neutral.600}" }
+        },
+        "border": { "value": "{color.core.neutral.200}" },
+        "icon": {
+          "color": { "value": "{color.core.neutral.400}" },
+          "size": { "value": "{size.spacing.5}" }
+        }
+      }
+    }
+  }
+}

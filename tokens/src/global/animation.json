@@ -1,0 +1,7 @@
+{
+  "animation": {
+    "transition": {
+      "default": { "value": "all 0.2s ease-in-out" }
+    }
+  }
+}

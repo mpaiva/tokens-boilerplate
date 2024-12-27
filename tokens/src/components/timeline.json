@@ -1,0 +1,27 @@
+{
+  "component": {
+    "timeline": {
+      "line": {
+        "width": { "value": "2px" },
+        "color": { "value": "{color.core.neutral.200}" }
+      },
+      "item": {
+        "spacing": { "value": "{size.spacing.8}" },
+        "dot": {
+          "size": { "value": "{size.spacing.3}" },
+          "background": {
+            "default": { "value": "{color.core.neutral.400}" },
+            "active": { "value": "{color.core.brand.primary.500}" },
+            "complete": { "value": "{color.core.brand.success.500}" }
+          }
+        },
+        "content": {
+          "padding": { "value": "{size.spacing.4}" },
+          "background": { "value": "{color.core.neutral.0}" },
+          "border": { "value": "{color.core.neutral.200}" },
+          "borderRadius": { "value": "{size.borderRadius.md}" }
+        }
+      }
+    }
+  }
+}

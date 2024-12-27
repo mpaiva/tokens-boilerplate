@@ -1,0 +1,13 @@
+{
+  "component": {
+    "toast": {
+      "base": {
+        "background": { "value": "{color.core.neutral.900}" },
+        "text": { "value": "{color.core.neutral.0}" },
+        "borderRadius": { "value": "{size.borderRadius.md}" },
+        "shadow": { "value": "{effect.shadow.lg}" },
+        "padding": { "value": "{size.spacing.4}" }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "component": {
+    "divider": {
+      "color": { "value": "{color.core.neutral.200}" },
+      "thickness": { "value": "1px" },
+      "spacing": { "value": "{size.spacing.4}" }
+    }
+  }
+}

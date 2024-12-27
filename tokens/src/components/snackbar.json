@@ -1,0 +1,19 @@
+{
+  "component": {
+    "snackbar": {
+      "base": {
+        "background": { "value": "{color.core.neutral.900}" },
+        "text": { "value": "{color.core.neutral.0}" },
+        "borderRadius": { "value": "{size.borderRadius.md}" },
+        "padding": {
+          "x": { "value": "{size.spacing.4}" },
+          "y": { "value": "{size.spacing.3}" }
+        },
+        "shadow": { "value": "{effect.shadow.lg}" }
+      },
+      "action": {
+        "text": { "value": "{color.core.brand.primary.400}" }
+      }
+    }
+  }
+}

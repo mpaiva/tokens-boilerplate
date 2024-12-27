@@ -1,0 +1,11 @@
+{
+  "component": {
+    "skeleton": {
+      "base": {
+        "background": { "value": "{color.core.neutral.100}" },
+        "highlight": { "value": "{color.core.neutral.200}" },
+        "borderRadius": { "value": "{size.borderRadius.md}" }
+      }
+    }
+  }
+}

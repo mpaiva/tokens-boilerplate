@@ -1,0 +1,70 @@
+{
+  "component": {
+    "button": {
+      "base": {
+        "borderRadius": { "value": "{size.borderRadius.md}" },
+        "fontWeight": { "value": "{typography.fontWeight.medium}" },
+        "transition": { "value": "{animation.transition.default}" }
+      },
+      "size": {
+        "sm": {
+          "padding": {
+            "x": { "value": "{size.spacing.3}" },
+            "y": { "value": "{size.spacing.1}" }
+          },
+          "fontSize": { "value": "{typography.fontSize.sm}" }
+        },
+        "md": {
+          "padding": {
+            "x": { "value": "{size.spacing.4}" },
+            "y": { "value": "{size.spacing.2}" }
+          },
+          "fontSize": { "value": "{typography.fontSize.base}" }
+        },
+        "lg": {
+          "padding": {
+            "x": { "value": "{size.spacing.5}" },
+            "y": { "value": "{size.spacing.3}" }
+          },
+          "fontSize": { "value": "{typography.fontSize.lg}" }
+        }
+      },
+      "variant": {
+        "solid": {
+          "primary": {
+            "background": {
+              "default": { "value": "{color.core.brand.primary.600}" },
+              "hover": { "value": "{color.core.brand.primary.700}" },
+              "active": { "value": "{color.core.brand.primary.800}" }
+            },
+            "text": { "value": "{color.core.neutral.0}" }
+          },
+          "secondary": {
+            "background": {
+              "default": { "value": "{color.core.neutral.200}" },
+              "hover": { "value": "{color.core.neutral.300}" },
+              "active": { "value": "{color.core.neutral.400}" }
+            },
+            "text": { "value": "{color.core.neutral.900}" }
+          }
+        },
+        "outline": {
+          "primary": {
+            "border": { "value": "{color.core.brand.primary.600}" },
+            "text": { "value": "{color.core.brand.primary.600}" },
+            "background": {
+              "hover": { "value": "{color.core.brand.primary.50}" }
+            }
+          },
+          "secondary": {
+            "border": { "value": "{color.core.neutral.300}" },
+            "text": { "value": "{color.core.neutral.700}" },
+            "background": {
+              "hover": { "value": "{color.core.neutral.50}" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

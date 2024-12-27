@@ -1,0 +1,36 @@
+{
+  "component": {
+    "alert": {
+      "base": {
+        "borderRadius": { "value": "{size.borderRadius.md}" },
+        "padding": { "value": "{size.spacing.4}" }
+      },
+      "variant": {
+        "info": {
+          "background": { "value": "{color.core.brand.info.50}" },
+          "border": { "value": "{color.core.brand.info.500}" },
+          "text": { "value": "{color.core.neutral.700}" },
+          "icon": { "value": "{color.core.brand.info.500}" }
+        },
+        "success": {
+          "background": { "value": "{color.core.brand.success.50}" },
+          "border": { "value": "{color.core.brand.success.500}" },
+          "text": { "value": "{color.core.neutral.700}" },
+          "icon": { "value": "{color.core.brand.success.500}" }
+        },
+        "warning": {
+          "background": { "value": "{color.core.brand.warning.50}" },
+          "border": { "value": "{color.core.brand.warning.500}" },
+          "text": { "value": "{color.core.neutral.700}" },
+          "icon": { "value": "{color.core.brand.warning.500}" }
+        },
+        "error": {
+          "background": { "value": "{color.core.brand.error.50}" },
+          "border": { "value": "{color.core.brand.error.500}" },
+          "text": { "value": "{color.core.neutral.700}" },
+          "icon": { "value": "{color.core.brand.error.500}" }
+        }
+      }
+    }
+  }
+}

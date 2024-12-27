@@ -1,0 +1,19 @@
+{
+  "component": {
+    "rating": {
+      "item": {
+        "size": {
+          "sm": { "value": "{size.spacing.4}" },
+          "md": { "value": "{size.spacing.5}" },
+          "lg": { "value": "{size.spacing.6}" }
+        },
+        "color": {
+          "filled": { "value": "{color.core.brand.warning.500}" },
+          "empty": { "value": "{color.core.neutral.200}" },
+          "hover": { "value": "{color.core.brand.warning.400}" }
+        }
+      },
+      "spacing": { "value": "{size.spacing.1}" }
+    }
+  }
+}

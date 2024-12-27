@@ -1,0 +1,34 @@
+{
+  "component": {
+    "accordion": {
+      "item": {
+        "background": { "value": "{color.core.neutral.0}" },
+        "border": { "value": "{color.core.neutral.200}" },
+        "borderRadius": { "value": "{size.borderRadius.md}" }
+      },
+      "header": {
+        "padding": {
+          "x": { "value": "{size.spacing.4}" },
+          "y": { "value": "{size.spacing.3}" }
+        },
+        "background": {
+          "default": { "value": "{color.core.neutral.0}" },
+          "hover": { "value": "{color.core.neutral.50}" }
+        },
+        "text": { "value": "{color.core.neutral.900}" },
+        "icon": {
+          "color": { "value": "{color.core.neutral.500}" },
+          "size": { "value": "{size.spacing.4}" }
+        }
+      },
+      "content": {
+        "padding": {
+          "x": { "value": "{size.spacing.4}" },
+          "y": { "value": "{size.spacing.3}" }
+        },
+        "background": { "value": "{color.core.neutral.0}" },
+        "text": { "value": "{color.core.neutral.700}" }
+      }
+    }
+  }
+}

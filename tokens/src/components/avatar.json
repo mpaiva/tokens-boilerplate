@@ -1,0 +1,23 @@
+{
+  "component": {
+    "avatar": {
+      "base": {
+        "borderRadius": { "value": "{size.borderRadius.full}" }
+      },
+      "size": {
+        "sm": { "value": "{size.spacing.8}" },
+        "md": { "value": "{size.spacing.10}" },
+        "lg": { "value": "{size.spacing.12}" }
+      },
+      "fallback": {
+        "background": { "value": "{color.core.neutral.100}" },
+        "text": { "value": "{color.core.neutral.600}" },
+        "fontSize": {
+          "sm": { "value": "{typography.fontSize.sm}" },
+          "md": { "value": "{typography.fontSize.base}" },
+          "lg": { "value": "{typography.fontSize.lg}" }
+        }
+      }
+    }
+  }
+}

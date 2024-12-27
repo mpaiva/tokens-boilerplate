@@ -1,0 +1,34 @@
+{
+  "component": {
+    "modal": {
+      "overlay": {
+        "background": { "value": "rgba(0, 0, 0, 0.5)" },
+        "backdropFilter": { "value": "blur(4px)" }
+      },
+      "container": {
+        "background": { "value": "{color.core.neutral.0}" },
+        "borderRadius": { "value": "{size.borderRadius.lg}" },
+        "shadow": { "value": "{effect.shadow.xl}" },
+        "maxWidth": {
+          "sm": { "value": "24rem" },
+          "md": { "value": "28rem" },
+          "lg": { "value": "32rem" },
+          "xl": { "value": "36rem" },
+          "2xl": { "value": "42rem" }
+        }
+      },
+      "header": {
+        "padding": { "value": "{size.spacing.6}" },
+        "border": { "value": "{color.core.neutral.200}" }
+      },
+      "body": {
+        "padding": { "value": "{size.spacing.6}" }
+      },
+      "footer": {
+        "padding": { "value": "{size.spacing.6}" },
+        "background": { "value": "{color.core.neutral.50}" },
+        "border": { "value": "{color.core.neutral.200}" }
+      }
+    }
+  }
+}

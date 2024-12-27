@@ -1,0 +1,29 @@
+{
+  "component": {
+    "card": {
+      "base": {
+        "background": { "value": "{color.core.neutral.0}" },
+        "borderRadius": { "value": "{size.borderRadius.lg}" },
+        "shadow": { "value": "{effect.shadow.md}" }
+      },
+      "padding": {
+        "sm": { "value": "{size.spacing.4}" },
+        "md": { "value": "{size.spacing.6}" },
+        "lg": { "value": "{size.spacing.8}" }
+      },
+      "border": {
+        "width": { "value": "{size.border.1}" },
+        "color": { "value": "{color.core.neutral.200}" }
+      },
+      "header": {
+        "padding": { "value": "{size.spacing.6}" },
+        "border": { "value": "{color.core.neutral.200}" }
+      },
+      "footer": {
+        "padding": { "value": "{size.spacing.6}" },
+        "background": { "value": "{color.core.neutral.50}" },
+        "border": { "value": "{color.core.neutral.200}" }
+      }
+    }
+  }
+}

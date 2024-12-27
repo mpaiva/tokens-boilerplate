@@ -1,0 +1,35 @@
+{
+  "component": {
+    "progress": {
+      "linear": {
+        "height": { "value": "{size.spacing.1}" },
+        "borderRadius": { "value": "{size.borderRadius.full}" },
+        "background": {
+          "track": { "value": "{color.core.neutral.100}" },
+          "indicator": { "value": "{color.core.brand.primary.600}" }
+        }
+      },
+      "circular": {
+        "size": {
+          "sm": { "value": "{size.spacing.8}" },
+          "md": { "value": "{size.spacing.12}" },
+          "lg": { "value": "{size.spacing.16}" }
+        },
+        "strokeWidth": {
+          "sm": { "value": "2px" },
+          "md": { "value": "3px" },
+          "lg": { "value": "4px" }
+        },
+        "color": { "value": "{color.core.brand.primary.600}" }
+      },
+      "spinner": {
+        "size": {
+          "sm": { "value": "{size.spacing.4}" },
+          "md": { "value": "{size.spacing.6}" },
+          "lg": { "value": "{size.spacing.8}" }
+        },
+        "color": { "value": "{color.core.brand.primary.600}" }
+      }
+    }
+  }
+}

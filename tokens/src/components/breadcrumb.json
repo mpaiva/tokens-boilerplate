@@ -1,0 +1,19 @@
+{
+  "component": {
+    "breadcrumb": {
+      "item": {
+        "text": {
+          "default": { "value": "{color.core.neutral.600}" },
+          "hover": { "value": "{color.core.neutral.900}" },
+          "current": { "value": "{color.core.neutral.900}" }
+        },
+        "fontSize": { "value": "{typography.fontSize.sm}" },
+        "spacing": { "value": "{size.spacing.2}" }
+      },
+      "separator": {
+        "color": { "value": "{color.core.neutral.400}" },
+        "spacing": { "value": "{size.spacing.2}" }
+      }
+    }
+  }
+}
