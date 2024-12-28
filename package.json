@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "tokens:build": "style-dictionary build --config ./tokens/config.js"
+    "tokens:build": "style-dictionary build --config ./tokens/config.cjs"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",

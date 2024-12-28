@@ -1,27 +1,38 @@
 import React from 'react';
-import { TokenDescription } from './TokenDescription';
-import { tokenDescriptions } from '@/tokens/descriptions';
+import { useDesignToken } from '../../hooks/useDesignToken';
+import type { TokenName } from '../../hooks/useDesignToken';
 
 interface EffectTokenProps {
-  name: string;
+  name: TokenName;
   value: string;
 }
 
-export const EffectToken = ({ name, value }: EffectTokenProps) => {
-  const description = tokenDescriptions.effects.shadow[name];
-
+export const EffectToken: React.FC<EffectTokenProps> = ({ name, value }) => {
+  const tokenValue = useDesignToken(name);
+  
   return (
-    <div className="space-y-2">
+    <div 
+      className="p-4 rounded-lg"
+      style={{ 
+        borderColor: useDesignToken('color-core-neutral-200'),
+        borderWidth: '1px'
+      }}
+    >
       <div 
-        className="h-24 w-full rounded-lg bg-white transition-transform hover:scale-105"
-        style={{ boxShadow: value }}
-        role="img"
-        aria-label={`Shadow example of type ${name}`}
+        className="w-full h-20 rounded-lg mb-3"
+        style={{ 
+          backgroundColor: useDesignToken('color-core-neutral-0'),
+          boxShadow: tokenValue
+        }}
       />
-      <div>
-        <p className="font-medium text-gray-900">Shadow {name}</p>
-        <p className="text-sm text-gray-600 break-words">{value}</p>
-        {description && <TokenDescription description={description} />}
+      <div className="space-y-1">
+        <p className="font-medium text-sm">{name}</p>
+        <p 
+          className="text-sm"
+          style={{ color: useDesignToken('color-core-neutral-500') }}
+        >
+          {value}
+        </p>
       </div>
     </div>
   );

@@ -1,48 +1,35 @@
 import React from 'react';
-import { TokenDescription } from './TokenDescription';
-import { tokenDescriptions } from '@/tokens/descriptions';
+import { useDesignToken } from '../../hooks/useDesignToken';
+import type { TokenName } from '../../hooks/useDesignToken';
 
 interface ColorTokenProps {
-  name: string;
+  name: TokenName;
   value: string;
-  category: string;
 }
 
-export const ColorToken = ({ name, value, category }: ColorTokenProps) => {
-  const getDescription = () => {
-    if (category === 'Primary') {
-      return tokenDescriptions.colors.theme.light.primary[name];
-    }
-    if (category === 'Neutral') {
-      return tokenDescriptions.colors.core.neutral[name];
-    }
-    return undefined;
-  };
-
-  const description = getDescription();
-
+export const ColorToken: React.FC<ColorTokenProps> = ({ name, value }) => {
+  const tokenValue = useDesignToken(name);
+  
   return (
-    <div className="group relative">
+    <div 
+      className="p-4 rounded-lg"
+      style={{ 
+        borderColor: useDesignToken('color-core-neutral-200'),
+        borderWidth: '1px'
+      }}
+    >
       <div 
-        className="h-16 w-full rounded-lg border shadow-sm transition-transform hover:scale-105 focus-within:ring-2 focus-within:ring-blue-500"
-        style={{ backgroundColor: value }}
-        role="img"
-        aria-label={`Color ${name} with value ${value}`}
-        tabIndex={0}
+        className="w-full h-16 rounded-md mb-3"
+        style={{ backgroundColor: tokenValue }}
       />
-      <div className="mt-2">
-        <p className="font-medium text-gray-900">{category} {name}</p>
-        <p className="text-sm text-gray-600">{value}</p>
-        {description && <TokenDescription description={description} />}
-      </div>
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 rounded-lg flex items-center justify-center">
-        <button 
-          onClick={() => navigator.clipboard.writeText(value)}
-          className="bg-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-gray-50"
-          aria-label={`Copy color value ${value}`}
+      <div className="space-y-1">
+        <p className="font-medium text-sm">{name}</p>
+        <p 
+          className="text-sm"
+          style={{ color: useDesignToken('color-core-neutral-500') }}
         >
-          Copy value
-        </button>
+          {value}
+        </p>
       </div>
     </div>
   );

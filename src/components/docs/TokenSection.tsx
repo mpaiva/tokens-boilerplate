@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDesignToken } from '../../hooks/useDesignToken';
 
 interface TokenSectionProps {
   title: string;
@@ -6,15 +7,24 @@ interface TokenSectionProps {
   children: React.ReactNode;
 }
 
-export const TokenSection = ({ title, description, children }: TokenSectionProps) => {
+export const TokenSection: React.FC<TokenSectionProps> = ({ 
+  title, 
+  description, 
+  children 
+}) => {
   return (
-    <section className="py-8 border-b border-gray-200 last:border-0">
-      <h2 className="text-2xl font-bold mb-2" id={title.toLowerCase()}>
-        {title}
-      </h2>
-      {description && (
-        <p className="text-gray-600 mb-6">{description}</p>
-      )}
+    <section className="space-y-6">
+      <div>
+        <h2 className="text-2xl font-bold mb-2">{title}</h2>
+        {description && (
+          <p 
+            className="text-lg"
+            style={{ color: useDesignToken('color-core-neutral-600') }}
+          >
+            {description}
+          </p>
+        )}
+      </div>
       {children}
     </section>
   );

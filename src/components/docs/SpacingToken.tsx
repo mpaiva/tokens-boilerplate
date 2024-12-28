@@ -1,28 +1,40 @@
 import React from 'react';
-import { TokenDescription } from './TokenDescription';
-import { tokenDescriptions } from '@/tokens/descriptions';
+import { useDesignToken } from '../../hooks/useDesignToken';
+import type { TokenName } from '../../hooks/useDesignToken';
 
 interface SpacingTokenProps {
-  name: string;
+  name: TokenName;
   value: string;
 }
 
-export const SpacingToken = ({ name, value }: SpacingTokenProps) => {
-  const description = tokenDescriptions.spacing[name];
-
+export const SpacingToken: React.FC<SpacingTokenProps> = ({ name, value }) => {
+  const tokenValue = useDesignToken(name);
+  
   return (
-    <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-      <div className="w-32 flex-shrink-0">
-        <p className="font-medium text-gray-900">Space {name}</p>
-        <p className="text-sm text-gray-600">{value}</p>
-        {description && <TokenDescription description={description} />}
+    <div 
+      className="p-4 rounded-lg flex items-center gap-4"
+      style={{ 
+        borderColor: useDesignToken('color-core-neutral-200'),
+        borderWidth: '1px'
+      }}
+    >
+      <div className="flex items-center gap-2">
+        <div 
+          className="rounded"
+          style={{ 
+            width: tokenValue,
+            height: '24px',
+            backgroundColor: useDesignToken('color-core-brand-primary-100')
+          }}
+        />
+        <div 
+          className="text-xs"
+          style={{ color: useDesignToken('color-core-neutral-500') }}
+        >
+          {value}
+        </div>
       </div>
-      <div 
-        className="bg-blue-200 rounded"
-        style={{ width: value, height: '24px' }}
-        role="img"
-        aria-label={`Spacing example of size ${value}`}
-      />
+      <p className="font-medium text-sm">{name}</p>
     </div>
   );
 };

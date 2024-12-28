@@ -1,29 +1,43 @@
 import React from 'react';
-import { TokenDescription } from './TokenDescription';
-import { tokenDescriptions } from '@/tokens/descriptions';
+import { useDesignToken } from '../../hooks/useDesignToken';
+import type { TokenName } from '../../hooks/useDesignToken';
 
 interface TypographyTokenProps {
-  name: string;
+  name: TokenName;
   value: string;
-  type: 'size' | 'weight';
 }
 
-export const TypographyToken = ({ name, value, type }: TypographyTokenProps) => {
-  const description = tokenDescriptions.typography[type === 'size' ? 'fontSize' : 'fontWeight'][name];
-
+export const TypographyToken: React.FC<TypographyTokenProps> = ({ name, value }) => {
+  const tokenValue = useDesignToken(name);
+  
   return (
-    <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-      <div className="w-32 flex-shrink-0">
-        <p className="font-medium text-gray-900">{name}</p>
-        <p className="text-sm text-gray-600">{value}</p>
-        {description && <TokenDescription description={description} />}
+    <div 
+      className="p-4 rounded-lg"
+      style={{ 
+        borderColor: useDesignToken('color-core-neutral-200'),
+        borderWidth: '1px'
+      }}
+    >
+      <div className="mb-4">
+        <p 
+          style={{ 
+            fontSize: name.includes('fontsize') ? tokenValue : undefined,
+            fontWeight: name.includes('fontweight') ? tokenValue : undefined,
+            lineHeight: 1.5
+          }}
+        >
+          The quick brown fox jumps over the lazy dog
+        </p>
       </div>
-      <p 
-        className="flex-grow"
-        style={type === 'size' ? { fontSize: value } : { fontWeight: value }}
-      >
-        The quick brown fox jumps over the lazy dog
-      </p>
+      <div className="space-y-1">
+        <p className="font-medium text-sm">{name}</p>
+        <p 
+          className="text-sm"
+          style={{ color: useDesignToken('color-core-neutral-500') }}
+        >
+          {value}
+        </p>
+      </div>
     </div>
   );
 };
